@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import { HighlightDirective } from './highlight.directive';
+import { HeroesListComponent } from './heroes-list.component';
+import { HeroesService } from './heroes.service';
 
 @Component({
     selector:'my-app',
-    templateUrl:'app.component.html',
-    directives:[HighlightDirective]
+    template:'<heroes-list></heroes-list>',
+    directives:[HeroesListComponent],
+    providers:[HeroesService]
 })
 export class AppComponent {
 }
